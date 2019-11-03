@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello
+  namespace: development
+spec:
+  minReadySeconds: 10
+  replicas: 10
+  selector:
+    matchLabels:
+      app: hello
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      containers:
+      - image: wdalmut/app1:17
+        name: hello-pod
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NODE_PORT
+          value: "3000"

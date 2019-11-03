@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app2
+  namespace: development
+spec:
+  minReadySeconds: 10
+  replicas: 10
+  selector:
+    matchLabels:
+      app: app2
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: app2
+    spec:
+      containers:
+      - image: wdalmut/app2:1
+        name: hello-pod
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NODE_ENV
+          value: production
+        - name: NODE_PORT
+          value: "3000"
+        - name: DB_HOST
+          value: mysql
+        - name: DB_NAME
+          value: app2
+        - name: DB_USER
+          value: root
+        - name: DB_PASS
+          valueFrom:
+            secretKeyRef:
+              name: mysql-config
+              key: mysql_root_password
+
