@@ -20,11 +20,7 @@ spec:
         app: app2
     spec:
       containers:
-      - image: wdalmut/app2:1
-        name: hello-pod
-        ports:
-        - containerPort: 3000
-        env:
+      - env:
         - name: NODE_ENV
           value: production
         - name: NODE_PORT
@@ -38,6 +34,9 @@ spec:
         - name: DB_PASS
           valueFrom:
             secretKeyRef:
-              name: mysql-config
               key: mysql_root_password
-
+              name: mysql-config
+        image: wdalmut/app2:26
+        name: hello-pod
+        ports:
+        - containerPort: 3000
