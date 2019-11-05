@@ -20,10 +20,10 @@ spec:
         app: hello
     spec:
       containers:
-      - image: wdalmut/app1:17
+      - env:
+        - name: NODE_PORT
+          value: "3000"
+        image: wdalmut/app1:6
         name: hello-pod
         ports:
         - containerPort: 3000
-        env:
-        - name: NODE_PORT
-          value: "3000"
