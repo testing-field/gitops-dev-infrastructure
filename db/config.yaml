@@ -2,29 +2,30 @@ apiVersion: v1
 kind: Secret
 metadata:
     name: mysql-config
+    namespace: development
 type: Opaque
 stringData:
-    mysql_root_password: ENC[AES256_GCM,data:F1IZQw==,iv:aZvLnfH0fV3aoTaDOV8vCWruY4ZPjcVEFksv5mIlZvU=,tag:JqJ8L7OP23in093By1SZsw==,type:str]
+    mysql_root_password: ENC[AES256_GCM,data:VS77kA==,iv:2/y8aK2cv6PQGLLIzGTk8lstG5SSyYKpspCp5jyr0MU=,tag:tDNjoSESlz8ViFexeCoT4w==,type:str]
 sops:
     kms: []
     gcp_kms: []
     azure_kv: []
-    lastmodified: '2019-11-04T14:50:38Z'
-    mac: ENC[AES256_GCM,data:NghUH9+R1jzShlTspqJvHfNnVlOVqj0Q3hlMma/n3QaHkhXqvwSMjBw0zgqRJR4LUaFT4JTNMuCxPl8D1GyTvG5iw8DgAehZvKa2j1AfMIhBkr7neTTqaIBBjifDW9zMgo64k+Hq7WEAZojIoaYSgzVybMdIuMqq6zQkoF95kGw=,iv:KwB73W+fS/iw/388yx/+Zn4HtOhvLJA11k3fgZAHMpk=,tag:4w4WIN8t99W0GZ9pQukMLA==,type:str]
+    lastmodified: '2019-11-07T20:46:59Z'
+    mac: ENC[AES256_GCM,data:g/n683m7rKmQgKg8kisNaobJX/7vJrEdgCNKYJSvzM6mv+73PGCxrOrCOg+nMZRtLW+fT6+OnFiY35DgD1WKVli+j4cANqOAZj1G/03QtIFncSk6GDvgzFtw6YqYd1BQWVu5P2ZKJJVgwewUgdHwQmUbc97Gd1ofFuTO3oUXqpI=,iv:/TcZhDGTsuKg3vl8MxZXIK0CQPtQH9wgt9avBW4r35E=,tag:wWx1W+cO/IqrcL4ZzwoaFw==,type:str]
     pgp:
-    -   created_at: '2019-11-04T14:50:37Z'
+    -   created_at: '2019-11-07T20:46:59Z'
         enc: |
             -----BEGIN PGP MESSAGE-----
 
-            hQEMA1HFmmCr1GsYAQgApL50De6VYtTMjX04SLVrMY3ASRDXeMRXJLvhSZpT6334
-            2Mx/AJzbZmYSQ3RVleAOQihCn8iSyMlh6EAdi1CeelY8HGLcM/WTnolrbcf4VSlC
-            7zLm/l4ngZVwsot1biWOLt9onMRCnH53peObWNyzkrL5AKc5XPF4ct2R8bXIh3Ol
-            LmC/lLHOWOKTKgEBMQKByslTqwgqnZmY0XEGULs5/JCtfFy8pufSGWUxQ4eqeyAb
-            4uaVTWXSN6H3lAVh1o/A76mktVg4qvQX7YjEwfgtUqO3ZNELrbt4He7SGTMgqrq/
-            fyoYKgbkQM8pgJ7X9MDe1JqFTkp0QA+UrNJ3q0x+stJeAe4BN+QifT21/YxK8Enc
-            MCnT90B32FlQhZoe+HHfgupqdqsvY2SwxzURZDSWn90aQe1Y7oXu7DJP2kZU9/Iu
-            SM8Xk4ZUADQ8umOaaqt9vZL4QlUsC3bIpVIRqCBKEg==
-            =FtfU
+            hQEMA1HFmmCr1GsYAQf8CAsGuAD4zvYkBWGHmvHcRaqaTsLPxV23jPLHIFEFaC9a
+            j7x9x63cAswSSYjNYhBw2IbDPOv/N7gYkkZiaDtiOhlARWhlTOFfw542T0NOoOxf
+            jO8zBuOMhz+MR1m2F+k9aT6z8e7TadLJidpVdcha2mTyJsJi3frHjjIVdwU06O7X
+            Nexry/ZwBrEd8S/9l/8HDqE3iPmODk5swILY0E6n75EHgkO7zFlE58UdZ5WO6N8A
+            dnOCEyfONiIRJyjA3c2fWleiyMiJPyBOZfYxULZuvc2NISPMJo3QQE9myqUbi7Hw
+            yUA/gL8kEgvqqvWe17lM6hCMzeqa0uH2Tt40OVWj5dJeAR7g6KPJnCQ6BaVxDQg4
+            d+ysRiHaIVJC1dO5NsWal4lsuavXYxEuFBCRZFSspIiOsUFYnXahHEc5tscL/xlh
+            9RTCk48551ysDaLY8i7sculc8nO9ZD6dkQJlR8DlXg==
+            =tQxu
             -----END PGP MESSAGE-----
         fp: 1C51546DEBCA0D0A502B099F307D119ECB73FAA9
     encrypted_suffix: stringData
